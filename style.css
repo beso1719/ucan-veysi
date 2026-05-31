@@ -1,0 +1,33 @@
+:root{
+  --bg:#0b1020; --card:#121a33; --ink:#eaf0ff; --muted:#9fb0d0;
+  --accent:#5cc8ff; --accent2:#ff7ad9; --good:#7CFC00; --bad:#ff5d5d;
+  --gold:#ffd54a;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html,body{margin:0; height:100%;}
+body{
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:radial-gradient(1200px 800px at 50% -10%, #1b2350 0%, var(--bg) 60%);
+  color:var(--ink); overscroll-behavior:none; touch-action:none;
+}
+#app{max-width:900px; margin:0 auto; min-height:100%; display:flex; flex-direction:column;}
+header{padding:14px 16px 6px; text-align:center;}
+h1{font-size:clamp(22px,5vw,34px); margin:.2em 0; letter-spacing:.5px;}
+.kite{filter:drop-shadow(0 4px 8px rgba(0,0,0,.5));}
+.hud{display:flex; gap:14px; justify-content:center; margin-top:6px;}
+.stat{background:var(--card); border:1px solid #243056; border-radius:12px; padding:6px 12px; min-width:84px;}
+.label{display:block; font-size:11px; color:var(--muted); letter-spacing:1px;}
+.stat span:last-child{font-size:18px; font-weight:700;}
+#game{position:relative; flex:1; margin:8px 12px 12px; border-radius:18px; overflow:hidden;
+  background:linear-gradient(180deg,#0e1430,#0a0f24); border:1px solid #1c2440; box-shadow:inset 0 0 60px rgba(0,0,0,.6);}
+canvas{display:block; width:100%; height:100%; touch-action:none;}
+#overlay{position:absolute; inset:0; display:none; align-items:center; justify-content:center; background:rgba(6,9,20,.72); backdrop-filter:blur(4px);}
+#overlay.show{display:flex;}
+.card{background:linear-gradient(180deg,#16203f,#0f1730); border:1px solid #28365f; border-radius:18px; padding:22px; width:min(92%,420px); text-align:center; box-shadow:0 18px 60px rgba(0,0,0,.55);}
+.card h2{margin:.2em 0 .4em; font-size:26px;}
+.card p{color:var(--muted); line-height:1.5; margin:.4em 0 1em;}
+button{font:inherit; font-weight:800; font-size:18px; padding:12px 22px; border:none; border-radius:14px; cursor:pointer;
+  background:linear-gradient(180deg,#6ad1ff,#3aa0ff); color:#05203a; box-shadow:0 10px 24px rgba(58,160,255,.45);}
+button:active{transform:translateY(1px);}
+.hint{font-size:12.5px; color:var(--muted); margin-top:12px;}
+@media (max-width:480px){ .hud{gap:8px;} .stat{min-width:72px;} }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#0b1020">
+<title>Uçan Veysi 🪂</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>UÇAN VEYSİ <span class="kite">🪂</span></h1>
+      <div class="hud">
+        <div class="stat"><span class="label">PUAN</span><span id="score">0</span></div>
+        <div class="stat"><span class="label">CAN</span><span id="lives">❤️❤️❤️</span></div>
+        <div class="stat"><span class="label">REKOR</span><span id="best">0</span></div>
+      </div>
+    </header>
+
+    <div id="game">
+      <canvas id="cv"></canvas>
+    </div>
+
+    <div id="overlay" class="show">
+      <div class="card">
+        <h2 id="ov-title">Uçan Veysi</h2>
+        <p id="ov-text">Düşen Veysi kafalarını yakala! Üst üste yakala → <b>KOMBO</b> ve puan çarpanı. 🌟Altın Veysi +5 · ❤️ can · ⭐ yavaş çekim · 💣 bombadan kaç!</p>
+        <button id="startBtn">BAŞLA</button>
+        <p class="hint">📱 Parmağını kaydır · 💻 Fare ya da ← → tuşları</p>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
